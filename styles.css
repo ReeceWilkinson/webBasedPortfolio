@@ -15,6 +15,7 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 header h1 {
@@ -26,6 +27,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -38,7 +40,7 @@ nav ul li a {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding: 2rem 0;
 }
@@ -50,11 +52,11 @@ section h2 {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .gallery-item {
-    flex: 1 1 calc(33.333% - 2rem);
+    flex: 1 1 calc(33.333% - 1rem);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     text-align: center;
@@ -93,4 +95,40 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .gallery-item {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-item {
+        flex: 1 1 100%;
+    }
+
+    form input, form textarea {
+        font-size: 1rem;
+    }
+
+    form button {
+        width: 100%;
+        font-size: 1.2rem;
+    }
 }
