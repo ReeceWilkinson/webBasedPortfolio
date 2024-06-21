@@ -90,6 +90,30 @@ form button {
     cursor: pointer;
 }
 
+.alternate-contact {
+    margin-top: 2rem;
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.alternate-contact h3 {
+    margin-top: 0;
+}
+
+.alternate-contact p {
+    margin: 0.5rem 0;
+}
+
+.alternate-contact a {
+    color: #333;
+    text-decoration: none;
+}
+
+.alternate-contact a:hover {
+    text-decoration: underline;
+}
+
 footer {
     background: #333;
     color: #fff;
